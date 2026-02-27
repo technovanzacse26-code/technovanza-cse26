@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { symposiumConfig } from "@/config/symposium";
 import EventCard from "./EventCard";
-import { Code, PartyPopper } from "lucide-react";
+import { Zap, Gamepad2 } from "lucide-react";
 
 const EventsSection = () => {
   const { technicalEvents, nonTechnicalEvents } = symposiumConfig;
+  const [activeTab, setActiveTab] = useState<"technical" | "non-technical">("technical");
+
+  const events = activeTab === "technical" ? technicalEvents : nonTechnicalEvents;
 
   return (
     <section id="events" className="py-20 relative">
@@ -14,55 +18,53 @@ const EventsSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="font-display text-3xl md:text-5xl font-bold text-gradient mb-4">
             Events
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Compete, create, and conquer across technical and non-technical challenges.
-          </p>
         </motion.div>
 
-        {/* Technical Events */}
-        <div className="mb-16">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-3 mb-8"
-          >
-            <Code className="w-6 h-6 text-primary" />
-            <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">
-              Technical Events
-            </h3>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technicalEvents.map((event, i) => (
-              <EventCard key={event.title} event={event} index={i} />
-            ))}
+        {/* Tabs like reference */}
+        <div className="flex justify-center mb-12">
+          <div className="inline-flex rounded-full border border-border/60 bg-muted/20 p-1">
+            <button
+              onClick={() => setActiveTab("technical")}
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-display font-semibold transition-all duration-300 ${
+                activeTab === "technical"
+                  ? "bg-primary text-primary-foreground neon-glow"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Zap className="w-4 h-4" />
+              Technical
+            </button>
+            <button
+              onClick={() => setActiveTab("non-technical")}
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-display font-semibold transition-all duration-300 ${
+                activeTab === "non-technical"
+                  ? "bg-primary text-primary-foreground neon-glow"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Gamepad2 className="w-4 h-4" />
+              Non-Technical
+            </button>
           </div>
         </div>
 
-        {/* Non-Technical Events */}
-        <div>
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-3 mb-8"
-          >
-            <PartyPopper className="w-6 h-6 text-secondary" />
-            <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">
-              Non-Technical Events
-            </h3>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {nonTechnicalEvents.map((event, i) => (
-              <EventCard key={event.title} event={event} index={i} />
-            ))}
-          </div>
-        </div>
+        {/* Event Cards Grid */}
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          {events.map((event, i) => (
+            <EventCard key={event.title} event={event} index={i} />
+          ))}
+        </motion.div>
       </div>
     </section>
   );

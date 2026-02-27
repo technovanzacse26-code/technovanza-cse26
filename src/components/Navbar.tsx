@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { symposiumConfig } from "@/config/symposium";
 import { Menu, X } from "lucide-react";
+import collegeLogo from "@/assets/college-logo.png";
+import deptLogo from "@/assets/dept-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Events", href: "#events" },
-  { label: "HOD", href: "#hod" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -22,21 +24,35 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass py-3" : "py-5"
+        scrolled ? "glass py-2" : "py-3 bg-background/80 backdrop-blur-sm"
       }`}
     >
       <div className="container px-4 flex items-center justify-between">
-        <a href="#home" className="font-display text-sm md:text-base font-bold text-gradient">
-          {symposiumConfig.name}
-        </a>
+        {/* Left: College Logo */}
+        <div className="flex items-center gap-3">
+          <img src={collegeLogo} alt="College Logo" className="w-10 h-10 object-contain" />
+        </div>
 
-        {/* Desktop */}
+        {/* Center: Title + Dept Logo */}
+        <div className="hidden md:flex items-center gap-4">
+          <span className="font-display text-sm font-bold text-primary tracking-widest">
+            {symposiumConfig.name}
+          </span>
+          <img src={deptLogo} alt="Dept Logo" className="w-10 h-10 object-contain" />
+        </div>
+
+        {/* Mobile center */}
+        <span className="md:hidden font-display text-xs font-bold text-primary tracking-wider">
+          {symposiumConfig.name}
+        </span>
+
+        {/* Right: Nav Links */}
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground hover:text-primary transition-colors font-mono"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {l.label}
             </a>
@@ -68,7 +84,7 @@ const Navbar = () => {
               key={l.href}
               href={l.href}
               onClick={() => setMobileOpen(false)}
-              className="text-sm text-muted-foreground hover:text-primary font-mono py-1"
+              className="text-sm text-muted-foreground hover:text-primary py-1"
             >
               {l.label}
             </a>
