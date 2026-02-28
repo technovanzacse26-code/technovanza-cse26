@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { symposiumConfig } from "@/config/symposium";
-import collegeLogo from "@/assets/college-logo.png";
-import deptLogo from "@/assets/dept-logo.png";
 import { CalendarDays, MapPin, ExternalLink } from "lucide-react";
 
 const HeroSection = () => {
@@ -101,16 +99,6 @@ const HeroSection = () => {
           </a>
         </motion.div>
 
-        {/* Logos at bottom */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="flex items-center justify-center gap-10 mt-12"
-        >
-          <img src={collegeLogo} alt="College Logo" className="w-20 h-20 md:w-24 md:h-24 object-contain opacity-70 hover:opacity-100 transition-opacity" />
-          <img src={deptLogo} alt="Department Logo" className="w-20 h-20 md:w-24 md:h-24 object-contain opacity-70 hover:opacity-100 transition-opacity" />
-        </motion.div>
       </div>
     </section>
   );
