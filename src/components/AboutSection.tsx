@@ -27,9 +27,9 @@ const AboutSection = () => {
           className="card-gradient neon-border rounded-2xl p-8 md:p-12 text-center"
         >
           {/* Logos */}
-          <div className="flex items-center justify-center gap-6 mb-8">
-            <img src={collegeLogo} alt="College Logo" className="w-20 h-20 object-contain" />
-            <img src={deptLogo} alt="Department Logo" className="w-20 h-20 object-contain" />
+          <div className="flex items-center justify-center gap-8 mb-8">
+            <img src={collegeLogo} alt="College Logo" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
+            <img src={deptLogo} alt="Department Logo" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
           </div>
 
           {/* HOD Details */}

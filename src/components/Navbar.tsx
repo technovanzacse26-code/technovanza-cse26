@@ -29,22 +29,17 @@ const Navbar = () => {
     >
       <div className="container px-4 flex items-center justify-between">
         {/* Left: College Logo */}
-        <div className="flex items-center gap-3">
-          <img src={collegeLogo} alt="College Logo" className="w-10 h-10 object-contain" />
+        <div className="flex items-center gap-2 shrink-0">
+          <img src={collegeLogo} alt="College Logo" className="w-12 h-12 md:w-14 md:h-14 object-contain" />
         </div>
 
         {/* Center: Title + Dept Logo */}
-        <div className="hidden md:flex items-center gap-4">
-          <span className="font-display text-sm font-bold text-primary tracking-widest">
+        <div className="flex items-center gap-3">
+          <span className="font-display text-[10px] md:text-sm font-bold text-primary tracking-widest text-center">
             {symposiumConfig.name}
           </span>
-          <img src={deptLogo} alt="Dept Logo" className="w-10 h-10 object-contain" />
+          <img src={deptLogo} alt="Dept Logo" className="hidden md:block w-12 h-12 md:w-14 md:h-14 object-contain" />
         </div>
-
-        {/* Mobile center */}
-        <span className="md:hidden font-display text-xs font-bold text-primary tracking-wider">
-          {symposiumConfig.name}
-        </span>
 
         {/* Right: Nav Links */}
         <div className="hidden md:flex items-center gap-6">
