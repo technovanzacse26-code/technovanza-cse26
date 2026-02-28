@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 import { symposiumConfig } from "@/config/symposium";
-import collegeLogo from "@/assets/college-logo.png";
-import deptLogo from "@/assets/dept-logo.png";
 
 const AboutSection = () => {
-  const { hod, collegeName, departmentName } = symposiumConfig;
+  const { principal, hod, collegeName, departmentName } = symposiumConfig;
 
   return (
     <section id="about" className="py-20 relative">
@@ -26,10 +24,15 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="card-gradient neon-border rounded-2xl p-8 md:p-12 text-center"
         >
-          {/* Logos */}
-          <div className="flex items-center justify-center gap-8 mb-8">
-            <img src={collegeLogo} alt="College Logo" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
-            <img src={deptLogo} alt="Department Logo" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
+          {/* Principal */}
+          <div className="mb-8 pb-6 border-b border-border/30">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-1">
+              {principal.name}
+            </h3>
+            <p className="font-mono text-sm text-primary">
+              {principal.title}
+            </p>
+            <p className="text-xs text-muted-foreground mt-1">{collegeName}</p>
           </div>
 
           {/* HOD Details */}
@@ -48,10 +51,6 @@ const AboutSection = () => {
               "{hod.message}"
             </blockquote>
           )}
-
-          <p className="mt-6 text-xs text-muted-foreground">
-            {collegeName}
-          </p>
         </motion.div>
       </div>
     </section>

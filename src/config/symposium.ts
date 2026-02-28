@@ -18,8 +18,13 @@ export const symposiumConfig = {
   googleFormLink: "https://forms.google.com/your-form-link",
 
   // ── HOD Details ──────────────────────────────────────────
+  principal: {
+    name: "Dr. S.N. Ramasamy",
+    title: "Principal",
+  },
+
   hod: {
-    name: "Dr. A. Kumar",
+    name: "Dr. K. Velmurugan ME, MBA, Ph.D.",
     title: "Professor & Head, Department of CSE",
     message:
       "Welcome to CSE Symposium 2026! This event is a platform for students to showcase their technical prowess and creative thinking. I encourage every student to participate and make the most of this opportunity.",
