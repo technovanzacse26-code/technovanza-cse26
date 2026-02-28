@@ -106,10 +106,10 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="flex items-center justify-center gap-8 mt-12"
+          className="flex items-center justify-center gap-10 mt-12"
         >
-          <img src={collegeLogo} alt="College Logo" className="w-16 h-16 md:w-20 md:h-20 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-          <img src={deptLogo} alt="Department Logo" className="w-16 h-16 md:w-20 md:h-20 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+          <img src={collegeLogo} alt="College Logo" className="w-20 h-20 md:w-24 md:h-24 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+          <img src={deptLogo} alt="Department Logo" className="w-20 h-20 md:w-24 md:h-24 object-contain opacity-70 hover:opacity-100 transition-opacity" />
         </motion.div>
       </div>
     </section>
