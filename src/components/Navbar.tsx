@@ -29,46 +29,38 @@ const Navbar = () => {
     >
       <div className="container px-4 flex items-center justify-between">
         {/* Left: College Logo */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="shrink-0">
           <img src={collegeLogo} alt="College Logo" className="w-12 h-12 md:w-14 md:h-14 object-contain" />
         </div>
 
-        {/* Center: Title + Dept Logo */}
-        <div className="flex items-center gap-3">
-          <span className="font-display text-[10px] md:text-sm font-bold text-primary tracking-widest text-center">
-            {symposiumConfig.name}
-          </span>
-          <img src={deptLogo} alt="Dept Logo" className="hidden md:block w-12 h-12 md:w-14 md:h-14 object-contain" />
-        </div>
-
-        {/* Right: Nav Links */}
-        <div className="hidden md:flex items-center gap-6">
+        {/* Center: Nav links (desktop) / Title (mobile) */}
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
             >
               {l.label}
             </a>
           ))}
-          <a
-            href={symposiumConfig.googleFormLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-display font-bold px-5 py-2 rounded-lg bg-primary text-primary-foreground hover:neon-glow transition-all duration-300"
-          >
-            Register
-          </a>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Mobile center title */}
+        <span className="md:hidden font-display text-[9px] font-bold text-primary tracking-widest text-center leading-tight">
+          {symposiumConfig.name}
+        </span>
+
+        {/* Right: Dept Logo + mobile toggle */}
+        <div className="flex items-center gap-3 shrink-0">
+          <img src={deptLogo} alt="Dept Logo" className="w-12 h-12 md:w-14 md:h-14 object-contain" />
+          <button
+            className="md:hidden text-foreground"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
