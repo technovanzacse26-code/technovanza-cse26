@@ -4,9 +4,9 @@ import { Users, User, Phone } from "lucide-react";
 
 // Emoji icons for events
 const eventIcons: Record<string, string> = {
-  "Debugging": "🐛",
+  "Debugging": "🔍🎯",
   "Prompt Engineering": "🤖",
-  "Coding Quiz": "💡",
+  "Coding Contest": "💡",
   "Ideathon": "🚀",
   "Rapid Rush": "⚡",
   "Photography": "📸",
@@ -21,7 +21,7 @@ interface EventCardProps {
 
 const EventCard = ({ event, index }: EventCardProps) => {
   const isTeam = event.type === "Team";
-  const icon = eventIcons[event.title] || "🎯";
+  const icon = eventIcons[event.title] || "🔍";
 
   return (
     <motion.div
@@ -81,7 +81,7 @@ const EventCard = ({ event, index }: EventCardProps) => {
       {/* Organizers */}
       <div className="border-t border-border/50 pt-4 mt-auto">
         <h4 className="text-xs font-display uppercase tracking-wider text-muted-foreground mb-2">
-          Organizer
+          Organizers
         </h4>
         <div className="space-y-1.5">
           {event.organizers.map((org, i) => (

@@ -19,7 +19,7 @@ const FooterSection = () => {
           {/* Main Organizer */}
           <div className="text-center">
             <h4 className="font-display text-xs uppercase tracking-wider text-muted-foreground mb-2">
-              Symposium Organizer
+             If you facing any problem on registration contact us
             </h4>
             <p className="text-sm font-semibold text-foreground">
               {mainOrganizer.name}
