@@ -19,7 +19,7 @@ export const symposiumConfig = {
 
   // ── HOD Details ──────────────────────────────────────────
   principal: {
-    name: "Dr. S.N. Ramasamy",
+    name: "Dr. S.N. Ramaswamy",
     title: "Principal",
   },
 
