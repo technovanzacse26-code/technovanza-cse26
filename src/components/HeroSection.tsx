@@ -66,7 +66,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
          className="text-sm md:text-base text-muted-foreground mb-10"
 >
-  Student Organisers: B.Aadhithiyan - 8667018155 || S.Vijay Narayan - 8668052217
+  Student Organisers: B.Aadhithiyan - 8667018155 || S.Vijay Narayan    8668052217
 </motion.p>
 
         {/* Date & Venue pills */}
