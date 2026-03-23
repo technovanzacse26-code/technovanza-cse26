@@ -64,10 +64,10 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-lg md:text-xl text-muted-foreground mb-10"
-        >
-          {tagline}
-        </motion.p>
+         className="text-sm md:text-base text-muted-foreground mb-10"
+>
+  Student Organisers: B.Aadhithiyan - 8667018155 || S.Vijay Narayan - 8668052217
+</motion.p>
 
         {/* Date & Venue pills */}
         <motion.div
