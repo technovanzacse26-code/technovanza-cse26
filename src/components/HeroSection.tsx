@@ -16,6 +16,16 @@ const HeroSection = () => {
 
       <div className="container relative z-10 text-center px-4 py-20">
         {/* College Name */}
+
+        {/* College Name */}
+<motion.p
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="text-muted-foreground text-sm md:text-base tracking-wide mb-2"
+>
+  {collegeName}
+</motion.p>
        
 
         {/* Department Name */}
