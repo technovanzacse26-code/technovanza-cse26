@@ -72,7 +72,7 @@ export const symposiumConfig = {
         "Complete within time limit",
       ],
       organizers: [
-        { name: "S.Mohamed Saif", phone: "8825641661" },
+        { name: "R.Niveesh", phone: "8637689191" },
         { name: "J.Fajila Begam", phone: "8072043845" },
       ],
     },
@@ -121,13 +121,13 @@ export const symposiumConfig = {
     {
       title: "Rapid Rush",
       description:
-        " Intresting Games With Happiness",
+        " Interesting Games With Happiness",
       type: "Team" as const,
       teamSize: 2,
       limit: 30,
       rules: [
         "(TeamSize:2)Round 1:",
-        "8 games — each game has a 2-minute time limit",
+        "10 games — each game has a 2-minute time limit",
         "At the end of Round 1, 6 teams will be selected based on points and time.",
         "Round 2 (Final):",
         "2 games",
@@ -171,11 +171,11 @@ export const symposiumConfig = {
         "Teamwork is not allowed",
         "Players alternate moves one at a time. White always moves first, providing a slight initial initiative.",
         "Rapid/Blitz: Fast-paced games (typically 3 to 15 minutes).",
-        "giveing points to each pieces",
+        "giving points to each pieces",
       ],
       organizers: [
         { name: "KK MoreshRam", phone: "8667270186" },
-        { name: "Kaviyaa", phone: "6383753116" },
+        { name: "Kaviya", phone: "6383753116" },
       ],
     },
     {
