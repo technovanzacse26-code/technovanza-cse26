@@ -45,7 +45,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-muted-foreground text-xs md:text-sm tracking-[0.3em] uppercase mb-6"
         >
-           Student Organisers: B.Aadhithiyan -8667018155 || S.Vijay Narayan-8668052217
+          
                                
         </motion.p>
 
