@@ -21,8 +21,8 @@ const HeroSection = () => {
 <motion.p
   initial={{ opacity: 0, y: -20 }}
   animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  className="text-muted-foreground text-sm md:text-base tracking-wide mb-2"
+  transition={{ duration: 0.6 }} 
+  className="text-white text-lg md:text-2xl font-semibold tracking-wide mb-2"
 >
   {collegeName}
 </motion.p>
