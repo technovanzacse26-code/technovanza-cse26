@@ -8,14 +8,14 @@ const FooterSection = () => {
     <footer id="contact" className="py-12 border-t border-border/50 relative">
       <div className="container px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-          {/* College Info */}
-          <div>
-            <h4 className="font-display text-sm font-bold text-foreground mb-2">
-              {collegeName}
-            </h4>
-            <p className="text-xs text-muted-foreground">{departmentName}</p>
-          </div>
-
+         {/* College Info */}
+<div>
+  <h4 className="font-display text-sm font-bold text-foreground mb-2">
+    Student Organisers
+  </h4>
+  <p className="text-xs text-muted-foreground">B.Aadhithiyan - 8667018155</p>
+  <p className="text-xs text-muted-foreground">S.Vijay Narayan - 8668052217</p>
+</div>
           {/* Main Organizer */}
           <div className="text-center">
             <h4 className="font-display text-xs uppercase tracking-wider text-muted-foreground mb-2">
