@@ -11,14 +11,14 @@ const FooterSection = () => {
          {/* College Info */}
 <div>
   <h4 className="font-display text-sm font-bold text-foreground mb-2">
-    {collegeName}
+    Student Organisers
   </h4>
-  <p className="text-xs text-muted-foreground">{departmentName}</p>
+  <p className="text-xs text-muted-foreground">  B.Aadhithiyan - 8667018155 || S.Vijay Narayan 8668052217 </p>
 </div>
           {/* Main Organizer */}
           <div className="text-center">
             <h4 className="font-display text-xs uppercase tracking-wider text-muted-foreground mb-2">
-             If you facing any problem on registration contact us
+             If you are facing any problem with registration, please contact us.
             </h4>
             <p className="text-sm font-semibold text-foreground">
               {mainOrganizer.name}
