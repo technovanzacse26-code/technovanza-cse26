@@ -15,7 +15,7 @@ export const symposiumConfig = {
 
   // ── Registration ─────────────────────────────────────────
   // Replace with your actual Google Form link
-  googleFormLink: "https://registeration-alert-page.onrender.com",
+  googleFormLink: "https://backend1-o41f.onrender.com",
 
   // ── HOD Details ──────────────────────────────────────────
   principal: {
