@@ -15,7 +15,7 @@ export const symposiumConfig = {
 
   // ── Registration ─────────────────────────────────────────
   // Replace with your actual Google Form link
-  googleFormLink: "https://techtml.onrender.com/",
+  googleFormLink: "https://www.aamec.edu.in/",
 
   // ── HOD Details ──────────────────────────────────────────
   principal: {
